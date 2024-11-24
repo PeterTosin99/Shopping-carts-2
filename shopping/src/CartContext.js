@@ -24,4 +24,4 @@ export const CartProvider = ({ children }) => {
 
 export const useCart = () => {
   return useContext(CartContext);
-};
+}
