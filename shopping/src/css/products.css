@@ -1,0 +1,57 @@
+.App {
+    text-align: center;
+  }
+  
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-wrap:wrap;
+  }
+  
+  .product {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 300px;   
+  }
+  
+  .product img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+  }
+
+  .linkbtn{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+
+button{
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+
+  .button-add {
+    background-color: rgb(153, 149, 149);
+    color: black;
+    transition: 0.5s ease-in-out;
+  }
+  .button-add:hover{
+    background-color: rgb(213, 208, 208);
+  }
+  .button-add.in-cart {
+    background-color: green;
+    color: white;
+  }
+  .rmvbtn:hover{
+    cursor: pointer;
+    background-color: rgb(228, 11, 11);
+    color: white;
+    transition: 0.5s ease-in-out;
+  }
