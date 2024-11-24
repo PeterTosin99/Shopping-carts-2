@@ -19,14 +19,12 @@ function generatePDF(cart) {
     return [product.title, product.description, product.price.toFixed(2)];
   });
 
-  // Generate the table with the unique product data
   doc.autoTable({
     head: headers,
     body: data,
     startY: 30,
   });
 
-  // Calculate the total price based on unique products
   const totalPrice = uniqueProducts.reduce(
     (total, productId) => {
       const product = cart.find((item) => item.id === productId);
@@ -35,10 +33,8 @@ function generatePDF(cart) {
     0
   );
 
-  // Display the total price at the end of the document
   doc.text(`Total Price: $${totalPrice.toFixed(2)}`, 14, doc.lastAutoTable.finalY + 10);
 
-  // Save the PDF
   doc.save('cart-summary.pdf');
 }
 export default generatePDF
