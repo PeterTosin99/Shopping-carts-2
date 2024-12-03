@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom ";
 import { useCart } from "./CartContext";
 
 
@@ -7,6 +7,7 @@ const Checkout = () => {
         const totalPrice = cart.reduce((total, item) => total + item.price, 0);
 
         const handleCheckout = () => {
+          // Placeholder for payment gateway integration
           alert(`Total products: ${cart.length}\nTotal amount: $${totalPrice}`);
         };
       
